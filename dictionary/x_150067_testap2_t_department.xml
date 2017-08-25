@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="T_Department" max_length="40" name="x_150067_testap2_t_department" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="20" name="u_name" type="string"/>
+        <element default="0" label="TicketRemains" mandatory="true" max_length="3" name="u_ticket_remains" read_only="true" type="integer"/>
+    </element>
+</database>

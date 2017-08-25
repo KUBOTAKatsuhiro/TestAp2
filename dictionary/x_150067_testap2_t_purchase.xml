@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="T_Purchase" max_length="40" name="x_150067_testap2_t_purchase" type="collection">
+        <element dependent="u_department1" dependent_on_field="u_department1" label="Department" mandatory="true" max_length="32" name="u_department1" reference="x_150067_testap2_t_department" type="reference" use_dependent_field="true"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="New List" max_length="1024" name="u_glide_list_1" type="glide_list"/>
+        <element dependent="u_department1" dependent_on_field="u_department1" label="New Reference" max_length="32" name="u_reference_3" reference="x_150067_testap2_t_department" type="reference" use_dependent_field="true"/>
+        <element label="New Name-Value Pairs" max_length="4000" name="u_simple_name_values_2" type="simple_name_values"/>
+        <element choice="3" default="1" label="TicketCount" mandatory="true" max_length="2" name="u_ticketcount" type="integer">
+            <choice>
+                <element label="1枚" sequence="0" value="1"/>
+                <element label="2枚" sequence="1" value="2"/>
+                <element label="4枚" sequence="2" value="4"/>
+                <element label="8枚" sequence="3" value="8"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_reference_3"/>
+        </index>
+        <index name="index2">
+            <element name="u_department1"/>
+        </index>
+    </element>
+</database>
